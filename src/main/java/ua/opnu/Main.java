@@ -8,7 +8,7 @@ public class Main {
         System.out.println("*Завдання 1: Перевірка простих чисел*");
         int[] testNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 17, 19};
         for (int num : testNumbers) {
-            System.out.println(num + " просте: " + Lab7.getIsPrime().test(num));
+            System.out.println(num + " просте: " + TaskProcessor.getIsPrime().test(num));
         }
 
         System.out.println("\n*Завдання 2: Фільтрація студентів*");
@@ -26,7 +26,7 @@ public class Main {
         }
 
         System.out.println("\nСтуденти без заборгованостей:");
-        Student[] filteredStudents = Lab7.filterStudents(students, Lab7.getNoDebtsPredicate());
+        Student[] filteredStudents = TaskProcessor.filterStudents(students, TaskProcessor.getNoDebtsPredicate());
         for (Student student : filteredStudents) {
             System.out.println(student);
         }
@@ -34,8 +34,8 @@ public class Main {
         System.out.println("\n*Завдання 3: Фільтрація за двома умовами*");
         Predicate<Student> groupAPredicate = student -> student.getGroup().equals("Група АІ-243");
 
-        Student[] doubleFiltered = Lab7.filterStudentsWithTwoPredicates(
-                students, Lab7.getNoDebtsPredicate(), groupAPredicate);
+        Student[] doubleFiltered = TaskProcessor.filterStudentsWithTwoPredicates(
+                students, TaskProcessor.getNoDebtsPredicate(), groupAPredicate);
         System.out.println("Студенти групи АІ-243 без заборгованостей:");
         for (Student student : doubleFiltered) {
             System.out.println(student);
@@ -43,7 +43,7 @@ public class Main {
 
         System.out.println("\n*Завдання 4: Consumer для студентів*");
         System.out.println("Вивід у форматі ПРІЗВИЩЕ + ІМ'Я:");
-        Lab7.forEachStudent(students, Lab7.getStudentNameConsumer());
+        TaskProcessor.forEachStudent(students, TaskProcessor.getStudentNameConsumer());
 
         System.out.println("\n*Завдання 5: Predicate + Consumer*");
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -52,11 +52,11 @@ public class Main {
         Consumer<Integer> squareConsumer = n -> System.out.println(n + "^2 = " + (n * n));
 
         System.out.println("Квадрати парних чисел:");
-        Lab7.processWithCondition(numbers, evenPredicate, squareConsumer);
+        TaskProcessor.processWithCondition(numbers, evenPredicate, squareConsumer);
 
         System.out.println("\n*Завдання 6: Function 2^n*");
         int[] inputNumbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int[] poweredNumbers = Lab7.processArray(inputNumbers, Lab7.getPowerOfTwo());
+        int[] poweredNumbers = TaskProcessor.processArray(inputNumbers, TaskProcessor.getPowerOfTwo());
 
         System.out.println("Результати 2^n:");
         for (int i = 0; i < inputNumbers.length; i++) {
@@ -65,7 +65,7 @@ public class Main {
 
         System.out.println("\n*Завдання 7: Перетворення чисел в слова*");
         int[] digits = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        String[] stringResults = Lab7.stringify(digits, Lab7.getNumberToString());
+        String[] stringResults = TaskProcessor.stringify(digits, TaskProcessor.getNumberToString());
 
         System.out.println("Числа словами:");
         for (int i = 0; i < digits.length; i++) {

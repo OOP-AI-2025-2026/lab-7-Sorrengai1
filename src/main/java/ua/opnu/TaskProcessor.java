@@ -3,7 +3,7 @@ package ua.opnu;
 import java.util.*;
 import java.util.function.*;
 
-public final class Lab7 {
+public final class TaskProcessor {
     private static final int PASSING_MARK = 60;
     private static final int FIRST_ODD_DIVISOR = 3;
     private static final int MAX_DIGIT = 9;
