@@ -34,6 +34,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return name + " (" + group + ") - " + Arrays.toString(marks);
+        return name + " (" + group + ") - "
+                + Arrays.toString(marks);
     }
 }

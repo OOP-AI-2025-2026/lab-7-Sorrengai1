@@ -4,8 +4,6 @@ import java.util.*;
 import java.util.function.*;
 
 public final class Lab7 {
-    private Lab7() {
-    }
     private static final int PASSING_MARK = 60;
     private static final int FIRST_ODD_DIVISOR = 3;
     private static final int MAX_DIGIT = 9;

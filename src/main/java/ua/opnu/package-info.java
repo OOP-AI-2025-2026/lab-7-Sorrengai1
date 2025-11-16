@@ -6,6 +6,6 @@
  * 4. Вивід студентів через Consumer
  * 5. Predicate + Consumer для масиву чисел
  * 6. Обчислення 2^n через Function
- * 7. Перетворення чисел у слова через Function.
+ * 7. Перетворення чисел у слова через Function
  */
 package ua.opnu;
